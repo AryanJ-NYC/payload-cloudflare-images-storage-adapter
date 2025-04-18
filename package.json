@@ -1,0 +1,58 @@
+{
+  "name": "payload-cloudflare-images-storage-adapter",
+  "version": "0.0.1",
+  "description": "A Payload CMS storage adapter for Cloudflare Images",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "prepublishOnly": "pnpm build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AryanJ-NYC/payload-cloudflare-images-storage-adapter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AryanJ-NYC/payload-cloudflare-images-storage-adapter/issues"
+  },
+  "homepage": "https://github.com/AryanJ-NYC/payload-cloudflare-images-storage-adapter#readme",
+  "keywords": [
+    "payload",
+    "cms",
+    "storage",
+    "adapter",
+    "cloudflare",
+    "images"
+  ],
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "payload": "^3.0.0"
+  },
+  "devDependencies": {
+    "@payloadcms/plugin-cloud-storage": "^3.35.1",
+    "@types/express": "^4.17.21",
+    "tsup": "^8.4.0"
+  },
+  "tsup": {
+    "entry": [
+      "index.ts"
+    ],
+    "format": [
+      "cjs",
+      "esm"
+    ],
+    "splitting": false,
+    "sourcemap": true,
+    "dts": {
+      "resolve": true
+    },
+    "clean": true,
+    "tsconfig": "tsconfig.json"
+  }
+}
